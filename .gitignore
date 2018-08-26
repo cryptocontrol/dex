@@ -1,0 +1,11 @@
+*.sw*
+.DS_Store
+.publish/
+.vscode/
+.idea
+*.iml
+scripts/blockchain/tmp
+dist/
+node_modules/
+npm-debug.log
+nohup.out

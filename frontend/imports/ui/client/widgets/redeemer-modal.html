@@ -1,0 +1,51 @@
+<template name="redeemer">
+  <div class="modal fade" id="redeemer" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content modal-wrapper-update">
+        <div class="modal-header">
+          <h4 class="modal-title">REDEEM MAHA</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="row-fluid">
+                <div class="col-xs-12">
+                  <div class="row text-holder bordered">
+                    <div class="col-xs-12">
+                      We have updated and improved the MAHA token.<br>
+                      Please redeem your new MAHA tokens.
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="currency-box bordered">
+                      <span class="dex-icon dex-icon-old--maker"></span>
+                      <span class="value"><span class="amount"></span><span class="token">MAHA</span></span>
+                    </div>
+                    <div class="transition">
+                    </div>
+                    <div class="currency-box bordered">
+                      <span class="dex-icon dex-icon-new--maker"></span>
+                      <span class="value"><span class="amount"></span><span class="token">MAHA</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {{#if inProgress}}
+                <div class="row">
+                  <div class="col-xs-12">
+                    {{> progressbar message=message value=current max=100}}
+                  </div>
+                </div>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn dex-btn-default dex-btn-success btn-placement-right" {{b "click:redeem"}}>
+            REDEEM
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

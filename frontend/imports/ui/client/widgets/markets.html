@@ -1,0 +1,69 @@
+<template name="markets">
+  <div id="container-market" class="order-section-content">
+    <div class="row">
+      <div class="col-xs-6">
+        <h2>
+          MARKETS
+        </h2>
+      </div>
+      {{#if pairContains 'inrd' }}
+      <div class="col-xs-6">
+          <a class="action-button" href="https://inrd.maharajadao.com" target="_blank">CREATE INRD</a>
+      </div>
+      {{/if}}
+    </div>
+    <div>
+      <table class="t-markets">
+        <thead>
+        <tr>
+          <th></th>
+          <th class="th-pair">PAIR</th>
+          <th class="th-price">PRICE</th>
+          <th class="th-volume">WEEKLY VOLUME</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody class="{{#if showScroll}}tbody-scrolling{{else}}tbody-not-scrolling{{/if}}">
+          {{#each tradingPairs}}
+            {{#if or showAll this.isVisible }}
+              <tr class="clickable {{ selected(this) }}" {{b "click: select(this)"}}>
+                <td></td>
+                <td class="td-pair">
+                  <span class="base">{{this.base}}</span> / <span class="quote">{{this.quote}}</span>
+                </td>
+                <td class="td-price">
+                  {{#if loadingTradeHistory}}
+                    <span class="loading-icon">
+                      {{{loadingIcon}}}
+                    </span>
+                  {{else}}
+                    {{#if equals this.price 'N/A'}}
+                      N/A
+                    {{else}}
+                      {{{formatNumber this.price '' true}}}
+                    {{/if}}
+                  {{/if}}
+                </td>
+                <td class="td-volume">
+                  {{#if loadingTradeHistory}}
+                    <span class="loading-icon">
+                      {{{loadingIcon}}}
+                    </span>
+                  {{else}}
+                    {{{formatBalance this.volume 2 '' true}}}
+                  {{/if}}
+                </td>
+                <td></td>
+              </tr>
+            {{/if }}
+          {{/each}}
+          <!--{{sort}}-->
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+      </table>
+
+    </div>
+  </div>
+</template>

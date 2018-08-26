@@ -1,0 +1,42 @@
+<body>
+  <div class="container">
+    {{#if and isConnected hasAccount}}
+      <div class="row row-header">
+        <section class="col-xs-6">
+          {{> networkStatus }}
+        </section>
+        <section class="col-xs-0">
+          {{> volumes }}
+        </section>
+        <section class="col-xs-6">
+          {{> accountSelector }}
+        </section>
+      </div>
+      <div class="row row-header row-messages">
+        {{> messages}}
+      </div>
+      {{#if ready}}
+        {{#if contractExists}}
+          <div class="row row-tabs">
+            {{> tabs }}
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="trade">{{> maintrades}}</div>
+            <div role="tabpanel" class="tab-pane" id="transfer">{{> maintransfer}}</div>
+            <div role="tabpanel" class="tab-pane" id="wrap">{{> maindeposit}}</div>
+          </div>
+        {{/if}}
+      {{/if}}
+    {{/if}}
+    {{> wrapperUpdate }}
+    {{> redeemer }}
+    {{#unless isConnected}}
+      {{> noEthereum}}
+    {{else}}
+      {{#unless hasAccount}}
+        {{> noAccount}}
+      {{/unless}}
+    {{/unless}}
+  </div>
+  {{> footer}}
+</body>

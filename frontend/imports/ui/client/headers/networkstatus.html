@@ -1,0 +1,56 @@
+<template name="networkStatus">
+  <div class="networkstatus-section">
+    <div class="col-xs-9 nplr ns-aux">
+      <div class="div-connected col-xs-6 npr">
+        <p>
+          <span class="network-type">{{network}}</span>
+          {{> whatisthis section="network"}}
+        </p>
+        <p class="nsp-aux">
+          {{#unless isConnected}}
+            (not connected)
+          {{else}}
+            {{#if syncing}}
+              <span class="yellow-circle"></span>
+              (syncing {{syncingPercentage}}%)
+            {{else}}
+              {{#if outOfSync}}
+                (out of sync, waiting for synchronization)
+              {{else}}
+                {{#if loading}}
+                  (loading offers {{loadingProgress}}%)
+                {{else}}
+                  {{#if ready}}
+                    <span class="green-circle"></span>
+                    <span class="network-status">CONNECTED</span>
+                  {{/if}}
+                {{/if}}
+              {{/if}}
+            {{/if}}
+          {{/unless}}
+        </p>
+      </div>
+      <div class="div-connected col-xs-6 nplr">
+        {{#if isMarketOpen}}
+          <p>
+            <span class="network-type">CLOSING TIME</span>
+            {{> whatisthis section="network"}}
+          </p>
+          <p class="nsp-aux">
+            <span class="clock-circle"><img class="clock-image" src="clock.svg" alt="clock"></span>
+            <span class="network-status">{{formatDateMarketClose marketCloseTime true}}</span>
+          </p>
+        {{else}}
+          <p>
+            <span class="network-type">MARKET STATUS</span>
+            {{> whatisthis section="network"}}
+          </p>
+          <p class="nsp-aux">
+            <span class="closed-circle"></span>
+            <span class="network-status">CLOSED</span>
+          </p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>
