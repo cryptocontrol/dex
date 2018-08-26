@@ -3,8 +3,6 @@ var exec = require('child_process').exec
 var gulp = require('gulp')
 var gulpsync = require('gulp-sync')(gulp)
 var ghPages = require('gulp-gh-pages')
-var surge = require('gulp-surge')
-var rename = require('gulp-rename');
 
 // meteor-build-client ../build
 gulp.task('build', function (cb) {
@@ -27,11 +25,5 @@ gulp.task('deploy-gh-pages', function () {
     .pipe(ghPages())
 })
 
-gulp.task('deploy-surge', [], function () {
-  return surge({
-    project: './dist',          // Path to your static build directory
-    domain: 'https://dex.maharajadao.com'  // Your domain or Surge subdomain
-  })
-})
 
 gulp.task('deploy', gulpsync.sync(['build', 'deploy-gh-pages']))
