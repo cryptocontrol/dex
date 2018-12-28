@@ -1,11 +1,11 @@
-MaharajaDEX - Decentralized Exchange for MAHA/INRD
+CryptoControl DEX - Decentralized Exchange for CCIO
 ==================================================
 
-MaharajaDEX is a fork of OasisDEX by MakerDAO. It allows you to trade MAHA/INRD tokens with ETH.
+CryptoControl DEX is a fork of OasisDEX by MakerDAO. It allows you to trade CCIO tokens with ETH.
 
 This is a simple on-chain OTC market for ERC20 Standard Tokens on the Ethereum Blockchain. You can either pick an order from the order book (in which case delivery will happen instantly), or submit a new order yourself.
 
-**MaharajaDEX is undergoing alpha testing: Proceed at your own risk, and use only small amounts of ETH and MKR.**
+**CryptoControl DEX is undergoing alpha testing: Proceed at your own risk, and use only small amounts of ETH and MKR.**
 
 ## Overview
 
@@ -27,7 +27,7 @@ Requirements:
 Clone and install:
 
 ```bash
-git clone https://github.com/MaharajaDao/dex.git
+git clone https://github.com/cryptocontrol/dex.git
 cd oasis
 npm install
 ```
