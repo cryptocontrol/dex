@@ -37,6 +37,7 @@ const tokenSpecs = {
   DAI: { precision: 18, format: '0,0.00[0000000000000000]' },
   SAI: { precision: 18, format: '0,0.00[0000000000000000]' },
   CCIO: { precision: 18, format: '0,0.00[0000000000000000]' },
+  TUSD: { precision: 9, format: '0,0.00[0000000]' },
   ENA: { precision: 9, format: '0,0.00[0000000]' },
   GNT: { precision: 18, format: '0,0.00[0000000000000000]' },
   'W-GNT': { precision: 18, format: '0,0.00[0000000000000000]' },
@@ -69,7 +70,7 @@ Dapple.generatePairs = () => {
     },
     {
       base: 'CCIO',
-      quote: 'DAI',
+      quote: 'TUSD',
       priority: 10,
     },
     {
@@ -79,7 +80,7 @@ Dapple.generatePairs = () => {
     },
     {
       base: 'ENA',
-      quote: 'DAI',
+      quote: 'TUSD',
       priority: 8,
     },
   ];
