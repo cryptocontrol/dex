@@ -20,7 +20,7 @@ gulp.task('build', function (cb) {
 
 // gh-pages
 gulp.task('deploy-gh-pages', function () {
-  require('fs').writeFileSync('./dist/CNAME', 'dex.maharajadao.com');
+  require('fs').writeFileSync('./dist/CNAME', 'dex.cryptocontrol.io');
   return gulp.src('./dist/**/*')
     .pipe(ghPages())
 })
