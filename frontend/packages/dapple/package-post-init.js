@@ -34,10 +34,10 @@ const tokens = config.tokens;
 const tokenSpecs = {
   'OW-ETH': { precision: 18, format: '0,0.00[0000000000000000]' },
   'W-ETH': { precision: 18, format: '0,0.00[0000000000000000]' },
-  INRD: { precision: 18, format: '0,0.00[0000000000000000]' },
+  DAI: { precision: 18, format: '0,0.00[0000000000000000]' },
   SAI: { precision: 18, format: '0,0.00[0000000000000000]' },
   CCIO: { precision: 18, format: '0,0.00[0000000000000000]' },
-  DGD: { precision: 9, format: '0,0.00[0000000]' },
+  ENA: { precision: 9, format: '0,0.00[0000000]' },
   GNT: { precision: 18, format: '0,0.00[0000000000000000]' },
   'W-GNT': { precision: 18, format: '0,0.00[0000000000000000]' },
   REP: { precision: 18, format: '0,0.00[0000000000000000]' },
@@ -58,7 +58,7 @@ Dapple.getQuoteTokens = () => ['W-ETH'];
 
 Dapple.getBaseTokens = () => [];
 
-Dapple.getTokens = () => ['W-ETH', 'CCIO', 'INRD'];
+Dapple.getTokens = () => ['W-ETH', 'CCIO', 'DAI', 'ENA'];
 
 Dapple.generatePairs = () => {
   const TradingPairs = [
@@ -68,20 +68,20 @@ Dapple.generatePairs = () => {
       priority: 10,
     },
     {
-      base: 'W-ETH',
-      quote: 'INRD',
-      priority: 9,
+      base: 'CCIO',
+      quote: 'DAI',
+      priority: 10,
     },
     {
-      base: 'CCIO',
-      quote: 'INRD',
+      base: 'ENA',
+      quote: 'W-ETH',
       priority: 8,
     },
-    // {
-    //   base: 'SAI',
-    //   quote: 'INRD',
-    //   priority: 7,
-    // },
+    {
+      base: 'ENA',
+      quote: 'DAI',
+      priority: 8,
+    },
   ];
 
   return TradingPairs;
