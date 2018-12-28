@@ -15,7 +15,7 @@ const TRANSFER_GAS = 150000;
 const TRANSACTION_TYPE = 'transfer';
 
 Template.sendtokens.viewmodel({
-  currency: 'MAHA',
+  currency: 'CCIO',
   currencies: Dapple.getTokens(),
   recipient: '',
   lastError: '',

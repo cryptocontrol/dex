@@ -35,7 +35,7 @@ Template.redeemer.viewmodel({
     }
 
     this.current(66);
-    this.message('Redeeming new MAHA tokens');
+    this.message('Redeeming new CCIO tokens');
     await redeemer.redeem();
 
     this.current(100);

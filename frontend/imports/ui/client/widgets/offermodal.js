@@ -167,7 +167,7 @@ Template.offermodal.viewmodel({
       const baseCurrency = Session.get('baseCurrency');
       const volume = new BigNumber(Template.currentData().offer.volume(baseCurrency));
       if (Template.currentData().offer.buyWhichToken === baseCurrency) {
-        // Calculate max volume, since we want to sell MAHA, we need to check how much MAHA we can sell
+        // Calculate max volume, since we want to sell CCIO, we need to check how much CCIO we can sell
         const token = Tokens.findOne(baseCurrency);
         if (token) {
           // Can at most sell balance, allowance, and offer's volume
@@ -189,7 +189,7 @@ Template.offermodal.viewmodel({
       const quoteCurrency = Session.get('quoteCurrency');
       const total = new BigNumber(Template.currentData().offer.volume(quoteCurrency));
       if (Template.currentData().offer.buyWhichToken === quoteCurrency) {
-        // Calculate max total, since we want to buy MAHA, we need to check how much of the currency is available
+        // Calculate max total, since we want to buy CCIO, we need to check how much of the currency is available
         const token = Tokens.findOne(quoteCurrency);
         if (token) {
           // Can at most buy balance, allowance, and offer's total
