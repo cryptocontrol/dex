@@ -59,24 +59,14 @@ Dapple.getQuoteTokens = () => ['W-ETH'];
 
 Dapple.getBaseTokens = () => [];
 
-Dapple.getTokens = () => ['W-ETH', 'CCIO', 'DAI', 'ENA'];
+Dapple.getTokens = () => ['W-ETH', 'CCIO', 'TUSD', 'ENA'];
 
 Dapple.generatePairs = () => {
   const TradingPairs = [
     {
       base: 'CCIO',
-      quote: 'W-ETH',
-      priority: 10,
-    },
-    {
-      base: 'CCIO',
       quote: 'TUSD',
       priority: 10,
-    },
-    {
-      base: 'ENA',
-      quote: 'W-ETH',
-      priority: 8,
     },
     {
       base: 'ENA',

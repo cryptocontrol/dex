@@ -22,7 +22,7 @@ gulp.task('build', function (cb) {
 gulp.task('deploy-gh-pages', function () {
   require('fs').writeFileSync('./dist/CNAME', 'dex.cryptocontrol.io');
   return gulp.src('./dist/**/*')
-    .pipe(ghPages())
+    // .pipe(ghPages())
 })
 
 
