@@ -16,8 +16,7 @@
       "DAI": "0xc4375b7de8af5a38a93548eb8453a498222c4ff2",
       "TUSD": "0x5ea3cdad0f7b623288d822180e6f56512112ece6",
       "CCIO": "0x81ae61c31cbf8b76293bf946d509777ccfd0f4bc",
-      "ENA": "0xaaf64bfcc32d0f15873a02163e7e500671a4ffcd",
-      "NMR": "0x13ec2f6ab4be5a55800193e7b22e83042405bb64"
+      "ENA": "0xaaf64bfcc32d0f15873a02163e7e500671a4ffcd"
     },
     "live": {
       "OW-ETH": "0xecf8f87f810ecf450940c9f60066b4a7a501d6a7",
@@ -25,8 +24,7 @@
       "DAI": "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359",
       "TUSD": "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359",
       "CCIO": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
-      "ENA": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
-      "NMR": "0x1776e1f26f98b1a5df9cd347953a26dd3cb46671"
+      "ENA": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2"
     }
   }
 }
