@@ -5,8 +5,8 @@
       "blockNumber": 9897255
     },
     "live": {
-      "address": "0x14fbca95be7e99c15cc2996c6c9d841e54b79425",
-      "blockNumber": 4751582
+      "address": "0xD1285c5d340F07D1D897f96C6e149dD652Fd1a73",
+      "blockNumber": 7013178
     }
   },
   "tokens": {
@@ -22,8 +22,8 @@
       "OW-ETH": "0xecf8f87f810ecf450940c9f60066b4a7a501d6a7",
       "W-ETH": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
       "DAI": "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359",
-      "TUSD": "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359",
-      "CCIO": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
+      "TUSD": "0x8dd5fbce2f6a956c3022ba3663759011dd51e73e",
+      "CCIO": "0x5e4c3057518bcd6b1276b4e6e85d43a1996d1c6e",
       "ENA": "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2"
     }
   }
